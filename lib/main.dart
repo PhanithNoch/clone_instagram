@@ -1,3 +1,4 @@
+import 'package:clone_instagram/screens/MainScreen.dart';
 import 'package:clone_instagram/screens/home_screen.dart';
 import 'package:flutter/material.dart';
 
@@ -12,7 +13,7 @@ class Home extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       theme: ThemeData(primaryColor: Colors.black54),
-      home: HomeScreen(),
+      home: MainScreen(),
     );
   }
 }

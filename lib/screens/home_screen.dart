@@ -1,8 +1,13 @@
 import 'package:flutter/material.dart';
 
-class HomeScreen extends StatelessWidget {
+class HomeScreen extends StatefulWidget {
   const HomeScreen({Key? key}) : super(key: key);
 
+  @override
+  State<HomeScreen> createState() => _HomeScreenState();
+}
+
+class _HomeScreenState extends State<HomeScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -38,6 +43,8 @@ class HomeScreen extends StatelessWidget {
           ItemListViewWidget(),
         ],
       ),
+
+      /// bottomNavigationbar
     );
   }
 }
@@ -72,6 +79,8 @@ class ItemListViewWidget extends StatelessWidget {
               IconButton(onPressed: () {}, icon: Icon(Icons.bookmark_border)),
             ],
           ),
+
+          /// bottomAction
           Padding(
             padding: const EdgeInsets.only(left: 8),
             child: Row(
@@ -102,6 +111,46 @@ class ItemListViewWidget extends StatelessWidget {
                 ),
               ],
             ),
+          ),
+          Padding(
+            padding: const EdgeInsets.only(left: 8),
+            child: Row(
+              children: const [
+                Text(
+                  'nith mario',
+                  style: TextStyle(fontSize: 10),
+                ),
+                SizedBox(
+                  width: 2,
+                ),
+                Text(
+                  'ซีนแรกพร้อมครับบบบ!!!',
+                  style: TextStyle(fontSize: 10),
+                ),
+              ],
+            ),
+          ),
+          Row(
+            children: [
+              const Padding(
+                padding: const EdgeInsets.all(8.0),
+                child: Icon(
+                  Icons.face,
+                  size: 20,
+                  color: Colors.orange,
+                ),
+              ),
+              Expanded(
+                child: TextFormField(
+                  style: TextStyle(fontSize: 10),
+                  decoration: const InputDecoration(
+                    hintText: 'Add a comment',
+                    hintStyle: TextStyle(fontSize: 10),
+                    border: InputBorder.none,
+                  ),
+                ),
+              ),
+            ],
           ),
         ],
       ),
