@@ -44,7 +44,7 @@ class SearchScreen extends StatelessWidget {
           actions: [
             TextButton(
                 onPressed: () {},
-                child: Text(
+                child: const Text(
                   'Cancel',
                   style: TextStyle(color: Colors.black54),
                 ))
@@ -54,8 +54,8 @@ class SearchScreen extends StatelessWidget {
           children: [
             TopTabViewItemWidget(),
             AccountTabViewItemWidget(),
-            const TagsTabViewItemWidget(),
-            const PlacesTabViewWidget(),
+            TagsTabViewItemWidget(),
+            PlacesTabViewWidget(),
           ],
         ),
       ),
@@ -68,7 +68,7 @@ class TopTabViewItemWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Center(
+    return const Center(
       child: Text('Top'),
     );
   }
@@ -79,7 +79,7 @@ class AccountTabViewItemWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Center(
+    return const Center(
       child: Text('Account'),
     );
   }
@@ -90,7 +90,7 @@ class TagsTabViewItemWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Center(
+    return const Center(
       child: Text('Tags'),
     );
   }
@@ -101,7 +101,7 @@ class PlacesTabViewWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Center(
+    return const Center(
       child: Text('Places'),
     );
   }

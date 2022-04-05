@@ -12,6 +12,7 @@ class Home extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       theme: ThemeData(primaryColor: Colors.black54),
       home: MainScreen(),
     );

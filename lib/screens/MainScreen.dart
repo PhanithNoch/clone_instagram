@@ -1,3 +1,4 @@
+import 'package:clone_instagram/screens/select_image_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:clone_instagram/screens/add_photo_screen.dart';
 import 'package:clone_instagram/screens/farvorite_screen.dart';
@@ -32,6 +33,13 @@ class _MainScreenState extends State<MainScreen> {
         showUnselectedLabels: false,
         currentIndex: selectedIndex,
         onTap: (index) {
+          if (index == 2) {
+            Navigator.push(
+              context,
+              MaterialPageRoute(
+                  builder: (context) => const SelectImageScreen()),
+            );
+          }
           setState(() {
             selectedIndex = index;
           });
