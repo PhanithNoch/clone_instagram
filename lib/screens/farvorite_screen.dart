@@ -30,10 +30,10 @@ class FavoriteScreen extends StatelessWidget {
               const SizedBox(
                 height: 10,
               ),
-              fovoriteItemWidget(),
-              fovoriteItemWidget(),
-              fovoriteItemWidget(),
-              fovoriteItemWidget(),
+              const fovoriteItemWidget(),
+              const fovoriteItemWidget(),
+              const fovoriteItemWidget(),
+              const fovoriteItemWidget(),
               Row(
                 children: const [
                   Text('Suggested for youu',
@@ -43,8 +43,8 @@ class FavoriteScreen extends StatelessWidget {
               const SizedBox(
                 height: 10,
               ),
-              fovoriteItemWidget(),
-              fovoriteItemWidget(),
+              const fovoriteItemWidget(),
+              const fovoriteItemWidget(),
               fovoriteItemWidget(),
               fovoriteItemWidget(),
             ],

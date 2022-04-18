@@ -22,7 +22,7 @@ class ProfileScreen extends StatelessWidget {
                   Row(
                     mainAxisAlignment: MainAxisAlignment.start,
                     children: [
-                      CircleAvatar(
+                      const CircleAvatar(
                         radius: 52,
                         backgroundColor: Colors.grey,
                         child: CircleAvatar(
@@ -132,10 +132,34 @@ class ProfileScreen extends StatelessWidget {
                       ),
                     ],
                   ),
+                  Container(
+                    height: 300,
+                    width: double.infinity,
+                    child: GalaryWidget(context),
+                  ),
                 ],
               ),
             )),
       ),
+    );
+  }
+
+  Widget GalaryWidget(BuildContext context) {
+    return MediaQuery.removePadding(
+      context: context,
+      removeTop: false,
+      child: GridView.builder(
+          gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
+            crossAxisCount: 3,
+          ),
+          itemCount: 6,
+          itemBuilder: (BuildContext context, int index) {
+            return Container(
+              padding: const EdgeInsets.all(3),
+              child: Image.network(
+                  'https://cdn.pixabay.com/photo/2020/03/17/12/02/vietnam-4940065_960_720.jpg'),
+            );
+          }),
     );
   }
 }
